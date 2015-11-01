@@ -1,5 +1,5 @@
 #源程序与编译
-permutation.cpp:递归（算法1）
+permutation.cpp:递归dfs（算法1）
 
 $g++ permutation.cpp -o permutation
 
