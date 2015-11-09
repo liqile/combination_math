@@ -1,7 +1,12 @@
 /**
-* Author: Jiancheng Li
-* Description: generate all permutations of n using 递减进位制数法.
-*/
+ * Project1 of Combination Math
+ * Description: generate all permutations of n using 递减进位制数法.
+ *
+ * Author: 
+ *    李其乐(2015210918) 
+ *    黎健成(2015210936) 
+ *    谭川奇(2015310609)
+ */
 #include <cstdio>
 #include <cstring>
 #include <vector>
@@ -101,7 +106,7 @@ void solve(int n)
 int main()
 {
     int n;
-    freopen("output.txt", "w", stdout);
+    //freopen("output.txt", "w", stdout);
     scanf("%d", &n);
     solve(n);
     return 0;

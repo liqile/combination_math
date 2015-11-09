@@ -1,3 +1,12 @@
+/**
+ * Project1 of Combination Math
+ * Description: 字典序法
+ *
+ * Author: 
+ *    李其乐(2015210918) 
+ *    黎健成(2015210936) 
+ *    谭川奇(2015310609)
+ */
 #include <iostream>
 using namespace std;
 void reverse(int* a, int n) {
@@ -40,15 +49,13 @@ void print(int* a, int n) {
 }
 int main() {
     int* a = new int[10];
-    while (true) {  
-        int n;
-        cin >>n;
-        for (int i = 0; i < n; ++ i) {  
-            a[i] = i;
-        }
+    int n;
+    cin >>n;
+    for (int i = 0; i < n; ++ i) {  
+        a[i] = i;
+    }
+    print(a, n);
+    while (getNext(a, n)) {
         print(a, n);
-        while (getNext(a, n)) {
-            print(a, n);
-        }
     }
 }

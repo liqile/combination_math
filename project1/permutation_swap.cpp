@@ -1,3 +1,12 @@
+/**
+ * Project1 of Combination Math
+ * Description: 邻位对换
+ *
+ * Author: 
+ *    李其乐(2015210918) 
+ *    黎健成(2015210936) 
+ *    谭川奇(2015310609)
+ */
 #include <iostream>
 using namespace std;
 int n;
@@ -68,15 +77,13 @@ bool hasNext() {
     return true;
 }
 int main() {
-    while(true) {
-        cin >> n;
-        for (int i = 0 ; i < n; ++ i) {
-            a[i] = i;
-            f[i] = false;
-        }
+    cin >> n;
+    for (int i = 0 ; i < n; ++ i) {
+        a[i] = i;
+        f[i] = false;
+    }
+    print();
+    while(hasNext()) {
         print();
-        while(hasNext()) {
-            print();
-        }
     }
 }

@@ -1,3 +1,13 @@
+/**
+ * Project1 of Combination Math
+ * Description: 深度优先算法
+ *
+ * Author: 
+ *    李其乐(2015210918) 
+ *    黎健成(2015210936) 
+ *    谭川奇(2015310609)
+ */
+
 #include <iostream>
 using namespace std;
 int n;
@@ -10,6 +20,7 @@ void dfs(int  t) {
         }
         cout << endl;
     }
+
     for (int i = 0; i < n; ++ i) {
         if (!f[i]) {
             f[i] = true;
@@ -20,11 +31,9 @@ void dfs(int  t) {
     }
 }
 int main() {
-    while (true) {
-        cin >> n;
-        for (int i = 0; i < n; ++ i) {
-            f[i] = false;
-        }
-        dfs(0);
+    cin >> n;
+    for (int i = 0; i < n; ++ i) {
+        f[i] = false;
     }
+    dfs(0);
 }

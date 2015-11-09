@@ -1,3 +1,12 @@
+/**
+ * Project1 of Combination Math
+ * Description: 将中介数分成一个个区间，多线程计算
+ *
+ * Author: 
+ *    李其乐(2015210918) 
+ *    黎健成(2015210936) 
+ *    谭川奇(2015310609)
+ */
 #include <iostream>
 #include <pthread.h>
 #include <unistd.h>
@@ -69,28 +78,26 @@ void* threadFunc(void* arg) {
     return NULL;
 }
 int main() {
-    while (true) {
-        cin >> n;
-        init();
-        int k = 10;
-        if (k > a[n]) {
-            k = a[n];
-        }
-        int start = 1;
-        int len = a[n] / k;
-        for (int i = 0; i < k; ++ i) {
-            arg[i].f = new bool[10];
-            arg[i].p = new int[10];
-            arg[i].s = start;
-            arg[i].t = start + len - 1;
-            start = start + len;
-        }
-        arg[k - 1].t = a[n];
-        for (int i = 0; i < k; ++ i) {
-            pthread_create(&ntid[i], NULL, threadFunc, &arg[i]);
-        }
-        for (int i = 0; i < k; ++ i) {
-            pthread_join(ntid[i], NULL);
-        }
+    cin >> n;
+    init();
+    int k = 10;
+    if (k > a[n]) {
+        k = a[n];
+    }
+    int start = 1;
+    int len = a[n] / k;
+    for (int i = 0; i < k; ++ i) {
+        arg[i].f = new bool[10];
+        arg[i].p = new int[10];
+        arg[i].s = start;
+        arg[i].t = start + len - 1;
+        start = start + len;
+    }
+    arg[k - 1].t = a[n];
+    for (int i = 0; i < k; ++ i) {
+        pthread_create(&ntid[i], NULL, threadFunc, &arg[i]);
+    }
+    for (int i = 0; i < k; ++ i) {
+        pthread_join(ntid[i], NULL);
     }
 }

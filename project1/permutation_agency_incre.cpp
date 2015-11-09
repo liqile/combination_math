@@ -1,3 +1,13 @@
+/**
+ * Project1 of Combination Math
+ * Description: 枚举中介数然后转换
+ *
+ * Author: 
+ *    李其乐(2015210918) 
+ *    黎健成(2015210936) 
+ *    谭川奇(2015310609)
+ */
+
 #include <iostream>
 using namespace std;
 int a[10];
@@ -44,9 +54,7 @@ void printAll(int s, int t) {
     }
 }
 int main() {
-    while (true) {
-        cin >> n;
-        init();
-        printAll(1, a[n]);
-    }
+    cin >> n;
+    init();
+    printAll(1, a[n]);
 }
